@@ -1,11 +1,22 @@
 
+{% load staticfiles %}
+<body>
+{% include "navbar.html" %}
+<link rel="stylesheet" type="text/css" href="{% static 'C:\Users\B\Desktop\skillshare\static\static\css\bootstrap.min.css' %}" />
 
+<link rel="stylesheet" type="text/css" href="{% static 'C:\Users\B\Desktop\skillshare\static\static\css\starter-template.css' %}" />
 
-<div class="inner cover">
-    <h1 class="cover-heading">About Us</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-default">Learn more</a>
-        </p>
-</div>
+<div class="container">
 
+      <div class="starter-template">
+        <h1 id="promise">We Work for You!</h1>
+        <p class="lead">Event Upload is built with love in Salt Lake City, Utah -- principally from the <i>very</i> coffee shops and venues that we serve.</p>  
+        <p class="lead">We learned about the "event calendar" problem by trying to help local businesses market their upcoming events.  As we found, the problem isn't a lack of event calendars; it's that there are too many and no single site or app to ensure that <i>your</i> customers will discover <i>your</i> event.</p>
+        <p class="lead">Thus, we automated the event upload experience -- promising to increase the reach of every event we upload and helping to ensure that people know the events happing where they live.</p>
+
+        <p class="lead"><b>Let us serve you today!</b></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Upload Your Event &raquo;</a></p>
+      </div>
+
+    </div><!-- /.container -->
+</body>

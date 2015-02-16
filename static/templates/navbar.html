@@ -9,15 +9,15 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img alt="EventUpload" src="C:\Users\B\Desktop\eventuploadio_pics\red_eventupload.io.png" />
+        <!-- {% load staticfiles %}  -->
+      <img src='{% static "C:\Users\B\Desktop\skillshare\static\static\images\salmon_euio.png" %}' alt="EventUPload" width="250" height="200" style="margin-top: -89px;"/>
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href='{% url "contactus" %}'>Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href='{% url "aboutus" %}'>About Us</a></li>

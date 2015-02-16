@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response, RequestContext
 
 # Create your views here.
-from .forms import SignUpForm
+from .forms import SignUpForm, ContactUs
 
 def home(request):
 
@@ -17,6 +17,16 @@ def home(request):
 
 def aboutus(request):
     return render_to_response('aboutus.html',
+                                locals(),
+                                context_instance=RequestContext(request)
+                            )
+
+def contactus(request):
+    form = SignUpForm(request.POST or None)
+    if form.is_valid():
+        save_it = form.save(commit=False)
+        save_it.save()
+    return render_to_response('contactus.html',
                                 locals(),
                                 context_instance=RequestContext(request)
                             )
