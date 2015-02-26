@@ -23,6 +23,7 @@ class ContactUs(models.Model):
     def __unicode__(self):
         return smart_unicode(self.email)
 
+
 class VenueRegistration(models.Model):
     venue_name = models.CharField(max_length=120, null=False, blank=False)
 

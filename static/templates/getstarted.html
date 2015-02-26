@@ -1,0 +1,27 @@
+<!-- get-started.html -->
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+<body>
+{% include "navbar.html" %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'C:\Users\B\Desktop\skillshare\static\static\css\bootstrap.min.css' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'C:\Users\B\Desktop\skillshare\static\static\css\starter-template.css' %}" />
+
+<div class="container">
+
+      <div class="starter-template">
+        <h1 id="promise">Before uploading your event <br> please <a href='% url "signin" %'>sign in</a> or complete the following to register!</h1>
+
+        
+  
+        <form id="regform" method="POST" action=""> {% csrf_token %}
+            <div class="form-group">
+                {% crispy form %}
+            </div>
+        </form>
+        
+        <p><a class="btn btn-primary btn-lg" href='javascript:document.getElementById("regform").submit()' role="button">Register</a></p>
+
+</body>
